@@ -25,4 +25,6 @@ export default function() {
   */
 
   this.get('/books');
+  this.get('/addresses');
+  this.post('/addresses');
 }

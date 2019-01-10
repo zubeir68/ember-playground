@@ -1,1 +1,18 @@
+<div class="ui top fixed menu" style="background-color:khaki">
+    <a class="item" href="/">
+     <i class="quidditch icon"></i>ember-playground
+    </a>
+    <a class="item" href="/books">Books-Mirage</a>
+    <a class="item" {{action (mut restRoutes) true}}>
+      {{#link-to "addresses"}}
+        CRUD-Mirage-App
+      {{/link-to}}
+    </a>
+    {{#if restRoutes}}
+      <a class="item">New</a>
+      <a class="item"></a>
+    {{/if}}
+</div>
+<br>
+<br>
 {{outlet}}
