@@ -1,0 +1,15 @@
+{{outlet}}
+<div class="ui center segment">
+    {{#ui-accordion class="styled"}}
+    {{#each model as |book|}}
+    <div class="title">
+        {{book.title}}
+    </div>
+    <div class="content">
+        Author: {{book.author}}
+        <br>
+        Release: {{book.year}}
+    </div>
+    {{/each}}
+    {{/ui-accordion}}
+</div>
