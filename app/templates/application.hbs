@@ -9,8 +9,11 @@
       {{/link-to}}
     </a>
     {{#if restRoutes}}
-      <a class="item">New</a>
-      <a class="item"></a>
+      <a class="item">
+        {{#link-to "addresses.new"}}
+          New
+        {{/link-to}}
+      </a>
     {{/if}}
 </div>
 <br>

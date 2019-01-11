@@ -1,3 +1,9 @@
+<br>
+<br>
+{{#link-to 'addresses.new'}}
+<button class="ui primary button">New address</button>
+{{/link-to}}
+
 <div class="ui segment">
     <table class="ui table">
         <thead>
@@ -6,6 +12,8 @@
             <th>Street</th>
             <th>City</th>
             <th>Country</th>
+            <th>Edit</th>
+            <th>Delete</th>
         </thead>
         <tbody>
             {{#each model as |address|}}
@@ -15,6 +23,16 @@
                 <td>{{address.street}}</td>
                 <td>{{address.city}}</td>
                 <td>{{address.country}}</td>
+                <td>
+                    {{#link-to 'addresses.edit' address.id}}
+                    {{address.firstName}}
+                    {{/link-to}}
+                </td>
+                <td>
+                    {{#link-to 'addresses.delete' address.id}}
+                    <i class="icon trash"></i>
+                    {{/link-to}}
+                </td>
             </tr>
             {{/each}}
         </tbody>
